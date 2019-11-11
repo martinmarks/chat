@@ -16,17 +16,15 @@ This app assumes a working Go setup
 
 ## Getting Started
 
-To get going...
-
-Either clone the repository,
+Clone the repository:
 ```
-git clone https://github.com/martinmarks/chat.git
+git clone ssh://git@github.com/martinmarks/chat.git
 ``` 
  
  or 
 
 ```
-go get github.com/martinmarks/chat
+git clone https://github.com/martinmarks/chat.git
 
 ```
 

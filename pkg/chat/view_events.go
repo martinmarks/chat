@@ -85,7 +85,7 @@ func authenticate(g *gocui.Gui, v *gocui.View) {
 	}
 	pool.AppendCertsFromPEM(severCert)
 
-	conn, err := tls.Dial("tcp", "127.0.0.1:5000", &tls.Config{RootCAs: pool})
+	conn, err := tls.Dial("tcp", "127.0.0.1:7777", &tls.Config{RootCAs: pool})
 	if err != nil {
 		closeWithError(g, fmt.Sprintf("Could not connection to chat Hub with error: %s", err.Error()))
 

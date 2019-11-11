@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	f, err := os.OpenFile("hub.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	f, err := os.OpenFile("hub.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0600)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
 	}
@@ -27,7 +27,7 @@ func main() {
 	}
 
 	config := &tls.Config{Certificates: []tls.Certificate{cert}}
-	ln, err := tls.Listen("tcp", ":5000", config)
+	ln, err := tls.Listen("tcp", "127.0.0.1:7777", config)
 	if err != nil {
 		log.Println(err)
 		return
